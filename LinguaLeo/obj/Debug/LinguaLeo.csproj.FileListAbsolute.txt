@@ -1,0 +1,10 @@
+D:\VisualStudio\LinguaLeo\LinguaLeo\bin\Debug\LinguaLeo.exe.config
+D:\VisualStudio\LinguaLeo\LinguaLeo\bin\Debug\LinguaLeo.exe
+D:\VisualStudio\LinguaLeo\LinguaLeo\bin\Debug\LinguaLeo.pdb
+D:\VisualStudio\LinguaLeo\LinguaLeo\obj\Debug\LinguaLeo.csproj.CoreCompileInputs.cache
+D:\VisualStudio\LinguaLeo\LinguaLeo\obj\Debug\LinguaLeo.exe
+D:\VisualStudio\LinguaLeo\LinguaLeo\obj\Debug\LinguaLeo.pdb
+D:\VisualStudio\LinguaLeo\LinguaLeo\obj\Debug\LinguaLeo.csprojResolveAssemblyReference.cache
+D:\VisualStudio\LinguaLeo\LinguaLeo\obj\Debug\LinguaLeo.Forms.MainForm.resources
+D:\VisualStudio\LinguaLeo\LinguaLeo\obj\Debug\LinguaLeo.Properties.Resources.resources
+D:\VisualStudio\LinguaLeo\LinguaLeo\obj\Debug\LinguaLeo.csproj.GenerateResource.Cache
