@@ -70,50 +70,72 @@ namespace LinguaLeo.Forms
                 this.progressBar1.Value = 0;
             }
         }
-
+        private static bool check = false;
         private void ImportWords_Click(object sender, EventArgs e)
         {
-            if (!Serrialize.isAuthed)
-                Auth_Click(null, null);
             if (!this.LoggerBox.Visible)
                 Log_Click(null, null);
 
-            Thread th;
-            if (Convert.ToInt32(WordsCounter.Text) == 1)
+            if (Serrialize.isAuthed)
             {
-                th = new Thread(thProcess1);
-                th.Start();
-            }
-            else if (Convert.ToInt32(WordsCounter.Text) >= 2)
-            {
-                th = new Thread(thProcess2);
-                th.Start();
-            }
-            else if (Convert.ToInt32(this.WordsCounter.Text) == 0)
-            {
+                check = false;
                 OpenFile_Click(null, null);
+
+                Thread th;
+                if (Convert.ToInt32(WordsCounter.Text) == 1)
+                {
+                    th = new Thread(thProcess1);
+                    th.Start();
+                }
+                else if (Convert.ToInt32(WordsCounter.Text) >= 2)
+                {
+                    th = new Thread(thProcess2);
+                    th.Start()
+                }
+            }
+            else if(!check)
+            {
+                check = true;
+                Auth_Click(null, null);
                 ImportWords_Click(null, null);
             }
         }
-        public void thProcess2()
-        {
-            this.Enabled = false;
-            for (int i = 0; i < words.Count; i++)
-            {
-                logger.Add(words[i].word + Serrialize.AddWord(api.AddWord(words[i].word, words[i].tword)));
-                this.progressBar1.Value += 1;
-                this.LoggerBox.ScrollToCaret();
-            }
-
-            this.Enabled = true;
-        }
+       
         public void thProcess1()
         {
             this.Enabled = false;
             logger.Add(words[0].word + Serrialize.AddWord(api.AddWord(words[0].word, words[0].tword)));
             this.progressBar1.Value += 1;
-
             this.Enabled = true;
+        }
+
+        public void thProcess2()
+        {
+            int c = 0, k = 49;
+            while (c < words.Count)
+            {
+                if (words.Count - c < 49)
+                    k = words.Count - c;
+                List<Word> w = words.GetRange(c, k);
+                c += k;
+                this.Enabled = false;
+                foreach (var item in Serrialize.AddWords(api.AddWords(w), w.Count))
+                    logger.Add(item);
+                this.progressBar1.Value += k;
+            }
+            this.Enabled = true;
+            this.LoggerBox.ScrollToCaret();
+        }
+
+
+        private void Password_TextChanged(object sender, EventArgs e)
+        {
+            check = false;
+        }
+
+        private void Login_TextChanged(object sender, EventArgs e)
+        {
+            check = false;
         }
     }
 }

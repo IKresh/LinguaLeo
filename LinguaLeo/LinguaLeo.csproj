@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{FDED40E7-DD90-42F1-882C-5D50E090D189}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>LinguaLeo</RootNamespace>
     <AssemblyName>LinguaLeo</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>

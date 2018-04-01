@@ -27,6 +27,7 @@ namespace LinguaLeo.Reader
                 var cells = range.Cells;
 
                 for (int rw = 1; rw <= cells.Rows.Count; rw++)
+                {
                     for (int cl = 1; cl <= cells.Columns.Count; cl++)
                         try
                         {
@@ -34,14 +35,16 @@ namespace LinguaLeo.Reader
                                 if (!words.Contains(new Word(cells[rw, cl].Value.ToString())))
                                 {
                                     words.Add(new Word(cells[rw, cl].Value.ToString()));
-                                    if (pb != null)
+                                    if (pb != null && cl % 3 == 0)
                                     {
                                         pb.Maximum += 1;
                                         pb.Value += 1;
+                                        Console.WriteLine(pb.Maximum+" "+pb.Value);
                                     }
                                 }
                         }
                         catch (Exception) { }
+                }
 
                 cells = null;
                 range = null;

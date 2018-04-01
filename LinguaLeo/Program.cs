@@ -1,8 +1,4 @@
 ﻿using System;
-using LinguaLeo.Api;
-using LinguaLeo.Reader;
-using LinguaLeo.Logs;
-using LinguaLeo.Serialization;
 using LinguaLeo.Forms;
 using System.Windows.Forms;
 

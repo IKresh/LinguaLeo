@@ -94,6 +94,7 @@
             this.Login.Name = "Login";
             this.Login.Size = new System.Drawing.Size(178, 20);
             this.Login.TabIndex = 4;
+            this.Login.TextChanged += new System.EventHandler(this.Login_TextChanged);
             // 
             // groupBox1
             // 
@@ -136,6 +137,7 @@
             this.Password.Name = "Password";
             this.Password.Size = new System.Drawing.Size(178, 20);
             this.Password.TabIndex = 5;
+            this.Password.TextChanged += new System.EventHandler(this.Password_TextChanged);
             // 
             // label2
             // 
