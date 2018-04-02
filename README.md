@@ -1,4 +1,4 @@
 # LinguaLeo
-Dictionary Importer
+# Dictionary Importer
 
 Hello! This is Dictionary Importer for LinguaLeo.
