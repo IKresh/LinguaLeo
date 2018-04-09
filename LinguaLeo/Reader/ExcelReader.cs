@@ -35,11 +35,10 @@ namespace LinguaLeo.Reader
                                 if (!words.Contains(new Word(cells[rw, cl].Value.ToString())))
                                 {
                                     words.Add(new Word(cells[rw, cl].Value.ToString()));
-                                    if (pb != null && cl % 3 == 0)
+                                    if (pb != null)
                                     {
                                         pb.Maximum += 1;
                                         pb.Value += 1;
-                                        Console.WriteLine(pb.Maximum+" "+pb.Value);
                                     }
                                 }
                         }

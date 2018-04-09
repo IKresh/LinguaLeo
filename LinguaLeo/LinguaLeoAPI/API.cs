@@ -9,21 +9,16 @@ namespace LinguaLeo.Api
     class API : IAPI
     {
         protected string API_URL = "http://api.lingualeo.com/";
-
-        private string Email;
-        private string Password;
         CookieContainer cookie = null;
 
-        public API(string Email, string Password)
+        public API()
         {
-            this.Email = Email;
-            this.Password = Password;
         }
 
-        public string Auth()
+        public string Auth(string Email, string Password)
         {
-            string urlParams = "email=" + this.Email
-                            + "&password=" + this.Password;
+            string urlParams = "email=" + Email
+                            + "&password=" + Password;
             return Process(urlParams, "api/login", "POST");
         }
 

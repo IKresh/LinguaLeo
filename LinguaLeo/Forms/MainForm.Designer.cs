@@ -33,7 +33,7 @@
             this.ImportWords = new System.Windows.Forms.Button();
             this.LoggerBox = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Login = new System.Windows.Forms.TextBox();
+            this.Email = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.Auth = new System.Windows.Forms.Button();
@@ -88,13 +88,13 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // Login
+            // Email
             // 
-            this.Login.Location = new System.Drawing.Point(63, 17);
-            this.Login.Name = "Login";
-            this.Login.Size = new System.Drawing.Size(178, 20);
-            this.Login.TabIndex = 4;
-            this.Login.TextChanged += new System.EventHandler(this.Login_TextChanged);
+            this.Email.Location = new System.Drawing.Point(63, 17);
+            this.Email.Name = "Email";
+            this.Email.Size = new System.Drawing.Size(178, 20);
+            this.Email.TabIndex = 4;
+            this.Email.TextChanged += new System.EventHandler(this.Login_TextChanged);
             // 
             // groupBox1
             // 
@@ -102,7 +102,7 @@
             this.groupBox1.Controls.Add(this.Auth);
             this.groupBox1.Controls.Add(this.Password);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.Login);
+            this.groupBox1.Controls.Add(this.Email);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(124, 12);
             this.groupBox1.Name = "groupBox1";
@@ -153,9 +153,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(22, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 13);
+            this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Login:";
+            this.label1.Text = "Email:";
             // 
             // label3
             // 
@@ -225,7 +225,7 @@
         private System.Windows.Forms.Button ImportWords;
         private System.Windows.Forms.TextBox LoggerBox;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox Login;
+        private System.Windows.Forms.TextBox Email;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox Password;
         private System.Windows.Forms.Label label2;
