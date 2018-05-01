@@ -52,7 +52,7 @@ namespace LinguaLeo.Reader
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                throw e;
             }
             xlApp.Quit();
             return null;

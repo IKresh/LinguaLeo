@@ -80,7 +80,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::LinguaLeo.Properties.Resources.Leo;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(12, 17);
             this.pictureBox1.Name = "pictureBox1";
@@ -223,7 +222,6 @@
 
         private System.Windows.Forms.Button OpenFile;
         private System.Windows.Forms.Button ImportWords;
-        private System.Windows.Forms.TextBox LoggerBox;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox Email;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -234,7 +232,8 @@
         private System.Windows.Forms.Button Auth;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label WordsCounter;
-        private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Button Log;
+        public System.Windows.Forms.ProgressBar progressBar1;
+        public System.Windows.Forms.TextBox LoggerBox;
     }
 }
